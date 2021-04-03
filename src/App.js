@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Ui } from './UI.First';
+import CharacterCount from './Interpolation';
+import { Currenttime } from './PreRender';
+import { Styled } from './styleComp';
+import Greeting from './Greeting';
 
+const user = ['Hi,The Naveen', 'And The Chauhan'];
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Ui user={user} />
+      <CharacterCount text="Hello Grandeur" />
+      <CharacterCount text="" />
+      <Currenttime />
+      <Styled />
+      <Greeting />
+    </>
   );
 }
 
